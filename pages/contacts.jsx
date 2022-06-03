@@ -1,13 +1,14 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
-    <>
+    <div className={`${styles.wrapper} wrapper`}>
       <Header page="contacts"/>
-      <motion.div className={styles.container} initial="pageInitial" animate="pageAnimate" variants={{
+      <motion.div className={`${styles.container} main`} initial="pageInitial" animate="pageAnimate" variants={{
         pageInitial: {
           opacity: 0
         },
@@ -22,6 +23,7 @@ export default function Home() {
         </Head>
         <h1>Contacts</h1>
       </motion.div>
-    </>
+      <Footer />
+    </div>
   )
 }

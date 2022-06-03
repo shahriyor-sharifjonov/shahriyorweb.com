@@ -10,6 +10,11 @@
     align-items: center;
     justify-content: flex-start;
 }
+.right{
+    @media (max-width: 1200px){
+        display: none;
+    }
+}
 .link{
     font-style: normal;
     font-weight: 450;
@@ -23,6 +28,9 @@
     border-right: 1px solid #1E2D3D;
     transition: 300ms ease-out;
     position: relative;
+    @media (max-width: 1200px){
+        display: none;
+    }
     &:hover{
         color: #fff;
     }
@@ -40,6 +48,9 @@
     }
     &:first-of-type{
         border-left: 1px solid #1E2D3D;
+        @media (max-width: 1200px){
+            border: none;
+        }
     }
     &.active{
         color: #FFFFFF;
@@ -54,5 +65,5 @@
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    width: 300px;
+    width: 311px;
 }
