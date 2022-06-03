@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/About.module.scss'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { motion } from 'framer-motion'
 
-export default function Home() {
+export default function About() {
   return (
     <div className={`${styles.wrapper} wrapper`}>
       <Header page="about"/>

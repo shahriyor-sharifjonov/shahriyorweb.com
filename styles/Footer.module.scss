@@ -34,6 +34,9 @@
     justify-content: flex-end;
     column-gap: 5px;
     border-left: 1px solid #1E2D3D;
+    &:last-of-type{
+        border-right: 1px solid #1E2D3D;
+    }
 }
 .icon{
     border-right: 1px solid #1E2D3D;
