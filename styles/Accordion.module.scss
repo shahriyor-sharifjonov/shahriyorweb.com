@@ -8,7 +8,8 @@
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
-    border-bottom: 1px solid transparent;
+    height: 40px;
+    border-bottom: 1px solid #1E2D3D;
     cursor: pointer;
     svg{
         transform: rotate(0deg);
@@ -16,13 +17,15 @@
     }
 }
 .active{
-    border-bottom: 1px solid #1E2D3D;
     svg{
         transform: rotate(180deg);
     }
 }
 .border{
-    border-top: 1px solid #1E2D3D;
+    border-bottom: 1px solid #1E2D3D;
+}
+.content{
+    border-bottom: 1px solid #1E2D3D;
 }
 .link{
     transition: 300ms ease-out;
@@ -42,6 +45,7 @@
         }
     }
     svg{
+        width: 16px;
         path{
             transition: 300ms ease-out;
             fill: #607B96;

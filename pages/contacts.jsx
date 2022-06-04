@@ -71,7 +71,22 @@ export default function Contacts() {
             <SubHeaderItem title='contacts'/> 
           </div>
           <div className={`${styles.contentRow}`}>
-            <div className={`${styles.form}`}>
+            <motion.div className={`${styles.form}`} 
+              initial={{ opacity: 0, y: '-10%' }} animate={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              exit={{
+                opacity: 0,
+                y: '-10%',
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+            >
               <div className={styles.formInner}>
                 <label htmlFor="name" className={`${styles.label}`}>_name:</label>
                 <input autoComplete='off' id="name" className={styles.input} type="text" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -86,16 +101,29 @@ export default function Contacts() {
                   submit-message
                 </motion.button>
               </div>
-            </div>
-            <div className={`${styles.result}`}>
+            </motion.div>
+            <motion.div className={`${styles.result}`} 
+              initial={{ opacity: 0 }} 
+              animate={{
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                },
+              }}
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 1,
+                },
+              }}>
               <Editor 
                 value={code}
                 onValueChange={code => setCode(code)}
                 highlight={code => highlight(code, languages.js)}
                 padding={0}
-                disabled
+                disabled 
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>

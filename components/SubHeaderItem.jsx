@@ -1,8 +1,24 @@
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 const SubHeaderItem = ({title}) => {
   return (
-    <div className='subheader__item'>
+    <motion.div className='subheader__item' 
+      initial={{ opacity: 0, x: '-10%' }} animate={{
+        opacity: 1,
+        x: 0,
+        transition: {
+          duration: 0.5,
+        },
+      }}
+      exit={{
+        opacity: 0,
+        x: '-10%',
+        transition: {
+          duration: 0.5,
+        },
+      }}
+    >
         {title}
         <Link href="/">
           <a>
@@ -11,7 +27,7 @@ const SubHeaderItem = ({title}) => {
             </svg>
           </a>
         </Link>
-    </div>
+    </motion.div>
   )
 }
 

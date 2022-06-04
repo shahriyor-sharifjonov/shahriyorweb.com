@@ -103,7 +103,7 @@ const Header = ({page}) => {
         <div className={styles.right}>
             {page == "contacts" ? (
                 <Link href="/contacts">
-                    <a className={`${styles.link} ${styles.active}`}>_contacts
+                    <a className={`${styles.link} ${styles.active}`}>_contact-me
                         <motion.div initial="pageInitial" animate="pageAnimate" variants={{
                             pageInitial: {
                                 opacity: 0
@@ -116,7 +116,7 @@ const Header = ({page}) => {
                 </Link>
             ) : (
                 <Link href="/contacts">
-                    <a className={`${styles.link}`}>_contacts
+                    <a className={`${styles.link}`}>_contact-me
                         <motion.div initial="pageInitial" animate="pageAnimate" variants={{
                             pageInitial: {
                                 opacity: 0
