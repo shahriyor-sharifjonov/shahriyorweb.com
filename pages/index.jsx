@@ -254,7 +254,7 @@ export default function Home() {
           <h2 className={styles.subtitle}>&gt; Full-stack developer</h2>
           <p className={styles.comment}>&#47;&#47; complete the game to continue</p>
           <p className={styles.comment}>&#47;&#47; you can also see it on my Github page</p>
-          <pre className={styles.code}>const <span className='variable'>githubLink</span> <span className='punctuation'>=</span> <a href="https://github.com/shahriyor-sharifjonov/shahriyorweb.com" rel="noreferrer" target="_blank" className='string link'>“https:&#47;&#47;github.com&#47;example&#47;url”</a></pre>
+          <pre className={styles.code}>const <span className='variable'>githubLink</span> <span className='punctuation'>=</span> <a href="https://github.com/shahriyor-sharifjonov/shahriyorweb.com" rel="noreferrer" target="_blank" className='string link'>“https:&#47;&#47;github.com&#47;shahriyor-sharifjonov&#47;”</a></pre>
         </motion.div>
         <motion.div className={styles.game}
           initial={{ opacity: 0 }} animate={{
