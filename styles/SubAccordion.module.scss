@@ -9,20 +9,16 @@
     line-height: 20px;
     color: #FFFFFF;
     height: 40px;
-    border-bottom: 1px solid #1E2D3D;
     cursor: pointer;
-    svg{
-        transform: rotate(0deg);
-        transition: 300ms ease-out;
-    }
+}
+.arrow{
+    transform: rotate(0deg);
+    transition: 300ms ease-out;
 }
 .active{
-    svg{
-        transform: rotate(180deg);
+    .arrow{
+        transform: rotate(90deg);
     }
-}
-.border{
-    border-bottom: 1px solid #1E2D3D;
 }
 .content{
     border-bottom: 1px solid #1E2D3D;
@@ -37,7 +33,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #607B96;
-    padding: 10px 22px;
+    padding: 10px 22px 10px 41px;
     &:hover{
         color: #fff;
         svg path{
@@ -51,6 +47,9 @@
             fill: #607B96;
         }
     }
+}
+.border{
+    border-bottom: 1px solid #1E2D3D;
 }
 .active{
     &.borderOnActive{

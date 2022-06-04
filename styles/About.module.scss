@@ -1,3 +1,31 @@
 .container {
-    padding: 0 2rem;
+}
+.text{
+    padding: 17px 37px;
+    width: 50%;
+    border-right: 1px solid #1E2D3D;
+    height: calc(100vh - 152px);
+    overflow-y: auto;
+}
+.comment{
+    color: #607B96;
+    font-weight: 450;
+    font-size: 18px;
+    white-space: break-spaces;
+    line-height: 150%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.gists{
+    width: 50%;
+    padding: 17px 37px;
+}
+.content{
+    &Row{
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: space-between;
+    }
 }

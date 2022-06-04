@@ -55,7 +55,7 @@ export default function Contacts() {
   return (
     <div className={`${styles.wrapper} wrapper`}>
       <Head>
-        <title>Shahriyorweb Full-stack developer</title>
+        <title>Contacts | Shahriyorweb</title>
         <meta name="description" content="Shahriyorweb Full-stack developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
