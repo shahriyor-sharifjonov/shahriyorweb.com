@@ -1,0 +1,50 @@
+.button{
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    svg{
+        transform: rotate(0deg);
+        transition: 300ms ease-out;
+    }
+}
+.active{
+    border-bottom: 1px solid #1E2D3D;
+    svg{
+        transform: rotate(180deg);
+    }
+}
+.border{
+    border-top: 1px solid #1E2D3D;
+}
+.link{
+    transition: 300ms ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #607B96;
+    padding: 10px 22px;
+    &:hover{
+        color: #fff;
+        svg path{
+            fill: #fff;
+        }
+    }
+    svg{
+        path{
+            transition: 300ms ease-out;
+            fill: #607B96;
+        }
+    }
+}
