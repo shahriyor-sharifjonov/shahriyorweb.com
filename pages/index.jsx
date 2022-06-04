@@ -44,7 +44,20 @@ export default function Home() {
           <p className={styles.comment}>&#47;&#47; you can also see it on my Github page</p>
           <pre className={styles.code}>const <span className='variable'>githubLink</span> <span className='punctuation'>=</span> <a href="https://github.com/shahriyor-sharifjonov/shahriyorweb.com" rel="noreferrer" target="_blank" className='string link'>“https:&#47;&#47;github.com&#47;example&#47;url”</a></pre>
         </motion.div>
-        <div className={styles.game}>
+        <motion.div className={styles.game}
+          initial={{ opacity: 0 }} animate={{
+            opacity: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+          exit={{
+            opacity: 0,
+            transition: {
+              duration: 1,
+            },
+          }}
+        >
           <div className={styles.gameContent}>
             <motion.button className={`btn ${styles.gameStartBtn}`}
               initial={{ x: '-50%'}}
@@ -103,7 +116,7 @@ export default function Home() {
               skip
             </motion.button>
           </div>
-        </div>
+        </motion.div>
       </motion.div>
       <Footer />
     </div>
