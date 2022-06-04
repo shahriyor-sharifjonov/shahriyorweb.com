@@ -158,3 +158,45 @@ button{
   background: none;
   cursor: pointer;
 }
+
+.food{
+  background: #43D9AD;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
+  transition: 300ms ease-out;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #43D9AD;
+    opacity: 0.2;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #43D9AD;
+    opacity: 0.1;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+}
+
+.snake{
+  background: #43D9AD;
+  width: 8px !important;
+  height: 8px !important;
+  position: relative;
+  opacity: 1;
+}
