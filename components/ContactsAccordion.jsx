@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/Accordion.module.scss'
 
-const ContactsAccordion = ({id}) => {
+const ContactsAccordion = ({ id }) => {
     const [isOpen, setIsOpen] = useState(true);
     return (
         <div className={styles.accordion}>

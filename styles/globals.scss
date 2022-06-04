@@ -99,10 +99,13 @@ h1{
         fill: #fff;
       }
     }
-    a{
+    button{
       display: flex;
       align-items: center;
       justify-content: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
       svg{
         path{
           transition: 300ms ease-out;
