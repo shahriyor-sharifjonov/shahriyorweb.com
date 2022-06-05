@@ -5,13 +5,10 @@ import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
 import AboutSidebar from '../../components/AboutSidebar'
 import SubHeaderItem from '../../components/SubHeaderItem'
+import { client } from '../../sanity/client'
 
-export default function About() {
-    const text = `/**
-* About me
-* I have 2 years of experience in web
-* development lorem ipsum dolor sit amet,
-** /`
+export default function About({personalInfo}) {
+
   return (
     <div className={`${styles.wrapper} wrapper`}>
       <Head>
@@ -43,7 +40,7 @@ export default function About() {
                     },
                 }}
             >
-                <p className={styles.comment}>{text}</p>
+                <p className={styles.comment}>{personalInfo}</p>
             </motion.div>
             <div className={styles.gists}>
                 <p className={`comment ${styles.comment}`}>&#47;&#47; Code snippet showcase:</p>
@@ -54,4 +51,21 @@ export default function About() {
       <Footer />
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  
+  const info = await client.fetch(`*[_type == "info"]`);
+  let personalInfo = '';
+  for(let i = 0; i < info.length; i++) {
+    if(info[i].name == 'personal-info'){
+      personalInfo = info[i].content
+    }
+  }
+
+  return {
+    props: {
+      personalInfo: personalInfo
+    }
+  };
 }
