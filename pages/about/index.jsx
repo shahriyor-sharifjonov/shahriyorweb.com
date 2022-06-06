@@ -8,7 +8,6 @@ import SubHeaderItem from '../../components/SubHeaderItem'
 import { client } from '../../sanity/client'
 
 export default function About({personalInfo}) {
-
   return (
     <div className={`${styles.wrapper} wrapper`}>
       <Head>
@@ -43,7 +42,14 @@ export default function About({personalInfo}) {
                 <p className={styles.comment}>{personalInfo}</p>
             </motion.div>
             <div className={styles.gists}>
-                <p className={`comment ${styles.comment}`}>&#47;&#47; Code snippet showcase:</p>
+              <p className={`comment ${styles.comment}`}>&#47;&#47; Code snippet showcase:</p>
+              <div className={styles.gistsList}>
+                <div className={styles.gist}>
+                  <div className={styles.gistHeader}>
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -54,7 +60,6 @@ export default function About({personalInfo}) {
 }
 
 export async function getServerSideProps() {
-  
   const info = await client.fetch(`*[_type == "info"]`);
   let personalInfo = '';
   for(let i = 0; i < info.length; i++) {
@@ -65,7 +70,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      personalInfo: personalInfo
+      personalInfo: personalInfo,
     }
   };
 }
